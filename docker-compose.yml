@@ -80,15 +80,6 @@ services:
       - BACKEND_STATIC_FILES=${BACKEND_STATIC_FILES}
       - BACKEND_UPLOAD_LIMIT=${BACKEND_UPLOAD_LIMIT}
 
-  jenkins:
-    container_name: ${PROJECT_NAME}_jenkins
-    image: jenkins:2.60.3
-    ports:
-      - 8000:8080
-      - 50000:50000
-    volumes:
-      - ./jenkins:/var/jenkins_home
-
 networks:
   fourb_net:
     driver: bridge
